@@ -34,15 +34,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fecha"
+        android:text="Id. Cliente"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         />
-
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/etdate"
+        android:id="@+id/etidcust"
         android:layout_gravity="center_horizontal"
         />
 
@@ -109,4 +108,5 @@
             android:text="Buscar"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
+
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.example.appinvoice_8;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 public class customer extends AppCompatActivity {
     //Instanciar los objetos con id del archivo xml asociado
     EditText idcust,name,email,phone;
-    Button btnsave,btnsearch;
+    Button btnsave,btnsearch,btnivoice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +23,21 @@ public class customer extends AppCompatActivity {
         setContentView(R.layout.activity_customer);
 
         //Referenciar los objetos instanciados con los id del archivo xml
-        idcust = findViewById(R.id.etidicust);
+        idcust = findViewById(R.id.etidcust);
         name = findViewById(R.id.etname);
         email = findViewById(R.id.etemail);
         phone = findViewById(R.id.etphone);
 
         btnsave = findViewById(R.id.btnsave);
         btnsearch = findViewById(R.id.btnsearch);
+        btnivoice = findViewById(R.id.btninvoice);
+
+        btnivoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            }
+        });
 
         btnsave.setOnClickListener(new View.OnClickListener() {
             @Override
